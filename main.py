@@ -11,15 +11,16 @@ print("7. Creation(x)")
 try:
     user_response = int(input("Enter response here:"))
     if user_response == 1:
-        print("Writing is the process of adding content to a file.It operates in two forms:")
-        print("1. Using write to create a file")
-        print("2. Using write to overwrite an existing file ")
+        print("\nWriting is the process of adding content to a file.It operates in two forms:")
+        print("\t1. Using write to create a file")
+        print("\t2. Using write to overwrite an existing file \n")
         user_response2 = int(input("Choose an action to simulate:"))
         if user_response2 == 1:
+            print("\nNote first that you are trying to write to 'myfile2.txt' which doesn't exist.Therefore,it is being created")
             file = open("myfile2.txt", "w")
-            user_write = input("Input words to add:")
+            user_write = input("\nInput words to add:")
             file.write(user_write)
-            print("Check the file created and the content you added")
+            print("Check the file created(myfile2.txt) and the content you added")
             file.close()
 
         elif user_response2 == 2:
@@ -94,8 +95,9 @@ try:
         file.close()
 
     while True:
-        user_response4 = input("Would you like to test run another file handling operation(yes/no):")
-        if user_response4 == "yes":
+        user_response4 = input("\nWOULD YOU LIKE TO TEST RUN ANOTHER FILE HANDLING OPERATION(yes/no):")
+        response_convert=user_response4.lower()
+        if response_convert == "yes":
             print("Welcome to Python File Handling Simulator( Using Access Modes)")
             print("Choose what operation you would like to perform")
             print("1. Writing(w)")
